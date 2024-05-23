@@ -4,7 +4,6 @@ pragma solidity ^0.8.0;
 
 contract coreRtVC
 {
-    uint sysStatus;
     address owner;
     bool status=true;
     string[] partyNames;
@@ -13,13 +12,12 @@ contract coreRtVC
     constructor()
     {
     
-        sysStatus=0;
        owner=  msg.sender;
     }
     
-    function sysStatusCheck() public view returns(uint)
+    function sysStatusCheck() public view returns(bool)
     {
-        return sysStatus;
+        return status;
     }
 
     function castVote(string memory _partyName) public 
@@ -43,10 +41,10 @@ contract coreRtVC
 
     function getAllVoteCount() public view returns(uint ){
         require(status == false);
-        uint totalVotes = 0;
-        for (uint i = 0; i < partyNames.length; i++) {
-            totalVotes += voteCount[partyNames[i]];
-        }
+        uint totalVotes = partyNames.length;
+        // for (uint i = 0; i < partyNames.length; i++) {
+        //     totalVotes =totalVotes + voteCount[partyNames[i]];
+        // }
         return totalVotes;
     }
     

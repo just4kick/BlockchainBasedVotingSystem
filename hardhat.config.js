@@ -7,8 +7,8 @@ module.exports = {
   {
     SepoliaETH:
     {
-      url:`https://eth-sepolia.g.alchemy.com/v2/${process.env.API_KEY}`,
-      accounts:[process.env.PRIVATE_KEY]
+      url:"https://eth-sepolia.g.alchemy.com/v2/Bs800PjH_V4KD4FxIs2g28IE-6eN9woO",
+      accounts:["a9b5e7627bf56e05f7dfa0bba0d1075c0891e6e3dba60de12f65c21e12277aa9"]
     }
   }
 };
